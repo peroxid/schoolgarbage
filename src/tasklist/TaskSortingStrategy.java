@@ -1,3 +1,4 @@
+package tasklist;
 import java.util.Comparator;
 
 public interface TaskSortingStrategy extends Comparator<Task> {
