@@ -2,12 +2,12 @@ package tasklist;
 import java.util.Date;
 
 public class Task {
-	
+
 	public enum STATUS { OPEN, CLOSED; }
 	public enum REPEATEVERY { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY; }
-	
-	
-	private STATUS status;	
+
+
+	private STATUS status;
     private String description;
     private Date dueDate;
     private boolean isRepetitive;
@@ -20,11 +20,11 @@ public class Task {
 		this.status = Task.STATUS.OPEN;
 		this.isRepetitive = false;
 	}
-	
+
     public boolean isRepetitive() {
 		return isRepetitive;
 	}
-    
+
     public REPEATEVERY getRepeatDay()
     {
     	return this.weekday;
@@ -45,9 +45,8 @@ public class Task {
 			this.isRepetitive = isRepetitive;
 			this.weekday = null;
 		}
-		
 	}
-      
+
 	public boolean isOpen() {
 		return this.status == Task.STATUS.OPEN;
 	}
